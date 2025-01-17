@@ -11,13 +11,12 @@ radius = 16.0
 script = ExtResource("1_if6mt")
 
 [node name="Fire" type="Sprite2D" parent="."]
-position = Vector2(220, 562.5)
+position = Vector2(-33, -0.5)
 texture = ExtResource("2_tso5b")
 
 [node name="FireTrail" type="Sprite2D" parent="."]
-position = Vector2(253, 562.5)
+position = Vector2(0, -0.5)
 texture = ExtResource("3_yswn5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(252, 563)
 shape = SubResource("CircleShape2D_785l8")
