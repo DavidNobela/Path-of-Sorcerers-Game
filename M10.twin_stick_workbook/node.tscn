@@ -6,8 +6,8 @@
 [node name="Node" type="Node2D"]
 
 [node name="RoomA" parent="." instance=ExtResource("1_1wrky")]
-position = Vector2(-9.53674e-07, 0)
+position = Vector2(1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_gw7jg")]
-position = Vector2(763, 566)
+position = Vector2(956, 543)
 rotation = -0.00114604
