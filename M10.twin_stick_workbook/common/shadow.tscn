@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqqxwvij1dsud"]
+[gd_scene load_steps=9 format=3 uid="uid://cqqxwvij1dsud"]
 
 [ext_resource type="Texture2D" uid="uid://bnuxefkl10pkv" path="res://common/shadow_circle.png" id="1"]
 [ext_resource type="Script" path="res://common/Player.gd" id="1_qkpn3"]
 [ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="2_a5qea"]
 [ext_resource type="Script" path="res://common/Sprite2D.gd" id="4_n6v5s"]
 [ext_resource type="Script" path="res://weapon.gd" id="5_2umkh"]
+[ext_resource type="Script" path="res://common/weapon_pivot.gd" id="5_8ctws"]
 [ext_resource type="Texture2D" uid="uid://dekkcmj408pvt" path="res://player/hand_fire.png" id="6_xhf73"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vxorg"]
@@ -30,6 +31,7 @@ shape = SubResource("CircleShape2D_vxorg")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="WeaponPivot" type="Node2D" parent="."]
+script = ExtResource("5_8ctws")
 
 [node name="WeaponAnchor" type="Marker2D" parent="WeaponPivot"]
 unique_name_in_owner = true
