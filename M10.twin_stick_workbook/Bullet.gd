@@ -5,6 +5,7 @@ class_name Bullet extends Area2D
 var max_range := 1000.0
 
 var _traveled_distance = 0.0
+var damage := 10
 
 
 func _physics_process(delta: float) -> void:
