@@ -1,26 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://c57ndxttjavv4"]
+[gd_scene load_steps=5 format=3 uid="uid://c57ndxttjavv4"]
 
-[ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="1_qd3th"]
+[ext_resource type="Script" path="res://Mob.gd" id="1_3saeg"]
+[ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="2_nf07d"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sonhw"]
-radius = 197.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_usqh7"]
+radius = 23.0282
+height = 130.033
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u45lh"]
-radius = 22.0087
-height = 129.994
+[sub_resource type="CircleShape2D" id="CircleShape2D_mdor8"]
+radius = 140.431
 
 [node name="Mob" type="CharacterBody2D"]
 motion_mode = 1
+script = ExtResource("1_3saeg")
+
+[node name="DetectionArea" type="Sprite2D" parent="."]
+texture = ExtResource("2_nf07d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = -0.11065
-shape = SubResource("CircleShape2D_sonhw")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qd3th")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 rotation = -1.56103
-shape = SubResource("CapsuleShape2D_u45lh")
+shape = SubResource("CapsuleShape2D_usqh7")
+
+[node name="DetectionArea2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea2"]
+shape = SubResource("CircleShape2D_mdor8")

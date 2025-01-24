@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctfuqwhv6apih"]
+[gd_scene load_steps=4 format=3 uid="uid://ctfuqwhv6apih"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_34pti"]
 [ext_resource type="PackedScene" uid="uid://cqqxwvij1dsud" path="res://common/shadow.tscn" id="2_y5df7"]
+[ext_resource type="PackedScene" uid="uid://c57ndxttjavv4" path="res://Mob.tscn" id="3_dkwwt"]
 
 [node name="test" type="Node2D"]
 
@@ -11,3 +12,6 @@ position = Vector2(1, 0)
 [node name="Player" parent="." instance=ExtResource("2_y5df7")]
 position = Vector2(956, 543)
 rotation = -0.00114604
+
+[node name="Mob" parent="." instance=ExtResource("3_dkwwt")]
+position = Vector2(584, 293)
