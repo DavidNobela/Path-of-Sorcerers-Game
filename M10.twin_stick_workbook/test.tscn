@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctfuqwhv6apih"]
+
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_34pti"]
+[ext_resource type="PackedScene" uid="uid://cqqxwvij1dsud" path="res://common/shadow.tscn" id="2_y5df7"]
+
+[node name="test" type="Node2D"]
+
+[node name="RoomA" parent="." instance=ExtResource("1_34pti")]
+position = Vector2(1, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_y5df7")]
+position = Vector2(956, 543)
+rotation = -0.00114604
