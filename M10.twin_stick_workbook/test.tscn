@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_34pti"]
 [ext_resource type="PackedScene" uid="uid://cqqxwvij1dsud" path="res://common/shadow.tscn" id="2_y5df7"]
-[ext_resource type="PackedScene" uid="uid://c57ndxttjavv4" path="res://Mob.tscn" id="3_dkwwt"]
+[ext_resource type="PackedScene" uid="uid://c57ndxttjavv4" path="res://mob.tscn" id="3_dkwwt"]
 [ext_resource type="PackedScene" uid="uid://cjix4job5x2kd" path="res://pickup.tscn" id="4_a5j2r"]
 [ext_resource type="Script" path="res://pickups/ItemHealing.gd" id="5_c73h8"]
 
