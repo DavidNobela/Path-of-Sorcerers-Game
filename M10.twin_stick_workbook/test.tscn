@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctfuqwhv6apih"]
+[gd_scene load_steps=7 format=3 uid="uid://ctfuqwhv6apih"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_34pti"]
 [ext_resource type="PackedScene" uid="uid://cqqxwvij1dsud" path="res://common/shadow.tscn" id="2_y5df7"]
 [ext_resource type="PackedScene" uid="uid://c57ndxttjavv4" path="res://Mob.tscn" id="3_dkwwt"]
 [ext_resource type="PackedScene" uid="uid://cjix4job5x2kd" path="res://pickup.tscn" id="4_a5j2r"]
+[ext_resource type="Script" path="res://pickups/ItemHealing.gd" id="5_c73h8"]
+
+[sub_resource type="Resource" id="Resource_fkllb"]
+script = ExtResource("5_c73h8")
+healing_amount = 40
+display_name = ""
 
 [node name="test" type="Node2D"]
 
@@ -18,4 +24,4 @@ rotation = -0.00114604
 position = Vector2(584, 293)
 
 [node name="Pickup" parent="." instance=ExtResource("4_a5j2r")]
-position = Vector2(321, 945)
+item = SubResource("Resource_fkllb")
