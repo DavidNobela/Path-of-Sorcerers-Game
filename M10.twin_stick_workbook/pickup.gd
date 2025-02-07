@@ -11,21 +11,12 @@ class_name Pickup extends Area2D
 func _ready() -> void:
 	set_item(item)
 
-	#_animation_player.play("idle")
 	body_entered.connect(func (body: Node2D) -> void:
 		if body is Player:
 			item.use(body)
-		#_animation_player.play("destroy")
-		# Disable collision monitoring to prevent picking up the item multiple times
 		set_deferred("monitoring", false)
 		queue_free()
-		# Play the pickup's sound effect and wait for the destroy animation to
-		# finish, to leave time for the sound to play before the pickup is
-		# removed from the scene
-		#_audio_stream_player.play()
-		#_animation_player.animation_finished.connect(func (_animation_name: String) -> void:
-			#queue_free()
-		#)
+	
 	)
 
 
