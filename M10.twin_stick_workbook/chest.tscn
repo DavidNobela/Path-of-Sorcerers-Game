@@ -1,61 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbq0od5p11oqs"]
+[gd_scene load_steps=6 format=3 uid="uid://lxrialkaac6n"]
 
 [ext_resource type="Texture2D" uid="uid://dub7cda3qxho2" path="res://pickups/chest/chest_bottom.png" id="1_wpe03"]
 [ext_resource type="Texture2D" uid="uid://bfj2ayjhou4bv" path="res://pickups/chest/chest_top.png" id="2_4q16d"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8lrv"]
-size = Vector2(85, 73)
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6w56"]
+radius = 59.0339
 
-[sub_resource type="Animation" id="Animation_aorjf"]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ChestTop:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(64, -27)]
-}
+[sub_resource type="Animation" id="Animation_yxjio"]
+resource_name = "Open"
 
-[sub_resource type="Animation" id="Animation_0dt8k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ChestTop:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqoj5"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i78ij"]
 _data = {
-"RESET": SubResource("Animation_0dt8k"),
-"open": SubResource("Animation_aorjf")
+"Open": SubResource("Animation_yxjio")
 }
 
 [node name="Chest" type="Area2D"]
 
 [node name="ChestBottom" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
 texture = ExtResource("1_wpe03")
 
 [node name="ChestTop" type="Sprite2D" parent="."]
 texture = ExtResource("2_4q16d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 7)
-shape = SubResource("RectangleShape2D_i8lrv")
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_t6w56")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_tqoj5")
+"": SubResource("AnimationLibrary_i78ij")
 }
