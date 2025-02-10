@@ -13,6 +13,7 @@ healing_amount = 40
 display_name = ""
 
 [node name="test" type="Node2D"]
+position = Vector2(4, -5)
 
 [node name="RoomA" parent="." instance=ExtResource("1_34pti")]
 position = Vector2(1, 0)
@@ -29,3 +30,4 @@ position = Vector2(328, 945)
 item = SubResource("Resource_fkllb")
 
 [node name="Chest" parent="." instance=ExtResource("6_sivjk")]
+position = Vector2(844, 1075)
