@@ -12,7 +12,7 @@ healing_amount = 40
 display_name = ""
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3f36"]
-size = Vector2(79, 68)
+size = Vector2(145.625, 119.375)
 
 [sub_resource type="Animation" id="Animation_5m374"]
 resource_name = "Open"
@@ -63,7 +63,7 @@ position = Vector2(0.5, -16.5)
 texture = ExtResource("2_4q16d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -9)
+position = Vector2(0.1875, -6.3125)
 shape = SubResource("RectangleShape2D_s3f36")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
