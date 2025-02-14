@@ -1,7 +1,7 @@
 class_name Bullet extends Area2D
 
 @export var speed := 750
-
+@export var hit_sound: AudioStreamPlayer2D = null
 var max_range := 1000.0
 
 var _traveled_distance = 0.0
@@ -25,4 +25,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _destroy():
+	if hit_sound != null:
+		hit_sound.play()
+		set_deferred("monitoring", false)
+		set_physics_process(false)
+		hide()
+		hit_sound.finished.connect(queue_free)
 	queue_free()

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dedy12ou0clek"]
+[gd_scene load_steps=3 format=3 uid="uid://dedy12ou0clek"]
 
 [ext_resource type="Script" path="res://weapon.gd" id="1_rlh8f"]
+[ext_resource type="AudioStream" uid="uid://8k3b4dtgtm7h" path="res://weapons/shoot_fire.wav" id="2_6elgu"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_rlh8f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6elgu")

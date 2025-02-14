@@ -8,7 +8,7 @@ radius = 23.0282
 height = 130.033
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdor8"]
-radius = 140.431
+radius = 408.648
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tt6ho"]
 radius = 16.7071
@@ -24,6 +24,7 @@ texture = ExtResource("2_nf07d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.56103
 shape = SubResource("CapsuleShape2D_usqh7")
+one_way_collision = true
 
 [node name="DetectionArea2" type="Area2D" parent="."]
 
